@@ -9,8 +9,11 @@ import Avatar from '@material-ui/core/Avatar';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeMenuState } from './../actions/changeMenuState';
 
+interface IProps{
+  id: string,
+}
 
-export const HeaderComponents:React.FC = () => {
+export const HeaderComponents:React.FC<IProps> = (props) => {
   const menuState:any = useSelector( ( reducers:any ) => reducers.menu)
   const dispatch = useDispatch();
   console.log(menuState)
@@ -24,7 +27,7 @@ export const HeaderComponents:React.FC = () => {
             <div style={{flexBasis: '98%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <Avatar alt="Remy Sharp" style={{marginRight: '1em'}}/>
                 <Typography variant="h6">
-                Group Name
+                  {props.id}
                 </Typography>
             </div>
           </Toolbar>
