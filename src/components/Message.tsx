@@ -4,8 +4,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 
+interface IMessageProps {
+    message: string;
+}
 
-const Message:React.FC = () => {
+const Message:React.FC<IMessageProps> = ({message}) => {
+    //console.log(message);
 	return (
         <Grid container spacing={0} className="message">
             <Grid item xs={2}>
@@ -14,7 +18,7 @@ const Message:React.FC = () => {
             <Grid item xs={10}>
                 <Paper className="message-content">
                     <h3>John Kowalski</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?</p>
+                    <p>{message}</p>
                 </Paper>
             </Grid>
         </Grid>
