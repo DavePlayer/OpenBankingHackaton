@@ -15,8 +15,11 @@ const Send:React.FC = () => {
 
 	return (
         <div className="message-box">
-            <TextField id="standard-basic" placeholder="Add message here..." onChange={(e) => setMessage(e.target.value)} />
-            <SendIcon className="send-icon" onClick={() => dispatch(sendMessage(message))}/>
+            <TextField id="standard-basic" placeholder="Add message here..." onChange={(e) => setMessage(e.target.value)} value={message} />
+            <SendIcon className="send-icon" onClick={() => {
+                dispatch(sendMessage(message));
+                setMessage('');
+                }}/>
         </div>
 	);
 }
