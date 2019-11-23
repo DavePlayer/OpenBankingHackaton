@@ -6,17 +6,11 @@ import { test } from './test';
 import { mainContent } from './mainContent'
 
 import { useSelector } from 'react-redux';
-// import { sendMessage } from '../actions/senMessage';
-// import { useEffect } from 'react';
 
 const Main:React.FC = () => {
 
-  //const dispatch = useDispatch();
   const messages: any = useSelector((msg: any) => msg);
 
-  // useEffect(()=>{
-  //   dispatch(sendMessage());
-  // }, [])
   const msg = messages.messages.text;
   console.log(msg);
 	return (

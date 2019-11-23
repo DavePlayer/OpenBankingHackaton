@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
 import sendMessage from './sendMessage';
-import postReducer from './postReducer';
-import { menu } from './menu';
+import goalReducer from './goalReducer';
 
 export default combineReducers({
     messages: sendMessage,
-    posts: postReducer,
-    menu,
-
+    goals: goalReducer
 })
