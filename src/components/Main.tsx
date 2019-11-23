@@ -1,13 +1,10 @@
 import React from 'react';
-// import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-//import Drawer from '@material-ui/core/Drawer';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Login } from './login';
 import { mainContent } from './mainContent'
-
 import { useSelector } from 'react-redux';
-// import { sendMessage } from '../actions/senMessage';
-// import { useEffect } from 'react';
+import { Register } from './Register';
+
 
 const Main:React.FC = () => {
 
@@ -24,6 +21,7 @@ const Main:React.FC = () => {
         <BrowserRouter>
           <Switch>
             <Route path='/' exact component={Login} />
+            <Route path='/register' exact component={Register} />
             <Route path='/groups/:id' exact  component={mainContent} />
             <Route path='/' render={() => <div>$404 Nie dziala</div>} />
           </Switch>
