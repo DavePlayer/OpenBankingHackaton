@@ -17,14 +17,16 @@ export const HeaderComponents:React.FC = () => {
 	return (
         <>
         <AppBar position="static">
-          <Toolbar>
-            <IconButton onClick={() => dispatch(changeMenuState())} edge="start" color="inherit" aria-label="menu">
+          <Toolbar style={{display: 'flex', justifyContent: 'center'}}>
+            <IconButton style={{flexBasis: '2%'}} onClick={() => dispatch(changeMenuState())} edge="start" color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton>
-            <Avatar alt="Remy Sharp"/>
-            <Typography variant="h6">
-              Group Name
-            </Typography>
+            <div style={{flexBasis: '98%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <Avatar alt="Remy Sharp" style={{marginRight: '1em'}}/>
+                <Typography variant="h6">
+                Group Name
+                </Typography>
+            </div>
           </Toolbar>
         </AppBar>
       </>
