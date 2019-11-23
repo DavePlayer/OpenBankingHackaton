@@ -1,11 +1,11 @@
 import { SEND_MESSAGE } from '../actions/types';
 
 interface SendMessage {
-    text: Array<string>;
+    text: Array<object>;
 }
 
 const initialState: SendMessage = {
-    text: [''],
+    text: [],
 }
 
 export default function(state = initialState, action: any) {

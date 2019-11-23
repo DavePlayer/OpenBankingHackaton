@@ -18,12 +18,12 @@ export const mainContent:React.FC<IProps> = ({ match }) => {
     return (
         <>
             <Header id={match.params.id} />
-            <GoalReminder />
+            <GoalReminder id={match.params.id}/>
              <div className="container">
                 <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
                 <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
-                { msg.map((el: any)=> el != '' && (<Message message={el}/>))}
-                <Send />
+                { msg.map((el: any)=> (el.message != '' && el.id == match.params.id) && (<Message message={el.message}/>))}
+                <Send id={match.params.id}/>
             </div>
         </>
     )
