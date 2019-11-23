@@ -12,8 +12,8 @@ const Main:React.FC = () => {
         <BrowserRouter>
           <Switch>
             <Route path='/' exact component={test} />
-            <Route path='/groups/:id?' exact  component={Header} />
-            <Route path='/' render={() => <div>$404 debilu</div>} />
+            <Route path='/groups/:id' exact  component={Header} />
+            <Route path='/' render={() => <div>$404 Nie dziala</div>} />
           </Switch>
         </BrowserRouter> 
       </div>
