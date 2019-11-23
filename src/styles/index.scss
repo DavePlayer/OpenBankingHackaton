@@ -64,3 +64,35 @@ body *
     margin: 0 auto !important;
     padding-bottom: 20px !important;
 }
+.err{
+    padding: 10px;
+    text-align: center;
+    color: red;
+}
+
+.goal-reminder{
+    position: fixed !important;
+    z-index: 1;
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    h4{
+        margin: 0;
+    }
+    p{
+        margin: 0;
+    }
+}
+.pay{
+    display: flex;
+    gap: 1em;
+    margin-top: 10px;
+}
+.pay-button {
+    min-width: 100px !important;
+
+}
+
+.payment {
+    padding: 20px;
+}
