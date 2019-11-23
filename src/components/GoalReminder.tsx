@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux';
 import { LinearProgress, Button, Dialog } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 
-const GoalReminder:React.FC = () => {
+interface IGoalReminderProps {
+    id: string;
+}
+
+const GoalReminder:React.FC<IGoalReminderProps> = ({id}) => {
 
     const [open, setOpen] = useState(false);
     const [payment, setPayment] = useState('0');
@@ -23,7 +27,7 @@ const GoalReminder:React.FC = () => {
     }
 	return (
         <>
-            {goal.goals.goal.map((el:any)  => el.name != '' && (
+            {goal.goals.goal.map((el:any)  => (el.name != '' && el.id == id) && (
                 <Paper className="goal-reminder">
                 <div>
                     <LinearProgress variant="determinate" value={completed} />
@@ -50,7 +54,7 @@ const GoalReminder:React.FC = () => {
                     <TextField id="standard-basic" label="Payment" onChange={(e) => setPayment(e.target.value)}/>
                     <Button variant="contained" color="primary" className="pay-button" onClick={() => pay()}>
                             Pay
-                        </Button>
+                    </Button>
                 </div>
             </Dialog>
         </>
