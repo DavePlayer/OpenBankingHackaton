@@ -9,7 +9,6 @@ interface IMessageProps {
 }
 
 const Message:React.FC<IMessageProps> = ({message}) => {
-    //console.log(message);
 	return (
         <Grid container spacing={0} className="message">
             <Grid item xs={2}>
