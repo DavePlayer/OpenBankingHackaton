@@ -15,12 +15,12 @@ export const Tolbar:React.FC<IProps> = (props) => {
     const dispatch = useDispatch()
     return (
         <Link to={`/groups/${props.groupName}`}>
-        <ButtonBase onClick={() => dispatch(changeMenuState())}>
-            <Toolbar className='ripple'>
-          <Avatar style={{marginRight: '1em'}} />
-          <Typography style={{color: 'black'}} variant="h6" noWrap>
-            {props.groupName}
-          </Typography>
+        <ButtonBase style={{width: '100%', borderBottom: '1px solid black',}} onClick={() => dispatch(changeMenuState())}>
+            <Toolbar style={{width: '100%', display: 'flex', justifyContent: 'space-between'}} className='ripple'>
+              <Avatar style={{marginRight: '1em'}} />
+              <Typography style={{color: 'black'}} variant="h6" noWrap>
+                {props.groupName}
+              </Typography>
             </Toolbar>
         </ButtonBase>
         </Link>
