@@ -1,0 +1,21 @@
+body *
+{
+    font-family: sans-serif;
+}
+.text-header{
+    margin-left: 20px !important;
+}
+
+.message {
+    margin-top: 50px !important;
+}
+.message-avatar{
+    margin: 0 auto !important;
+}
+.message-content {
+    padding: 5px;
+    h3{
+        margin:0;
+        padding-top: 5px;
+    }
+}
