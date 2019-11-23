@@ -14,7 +14,7 @@ interface IProps{
 export const Tolbar:React.FC<IProps> = (props) => {
     const dispatch = useDispatch()
     return (
-        <Link to={`/groups/${props.groupName}`}>
+        <Link to={`/users/olek/groups/${props.groupName}`}>
         <ButtonBase style={{width: '100%', borderBottom: '1px solid black',}} onClick={() => dispatch(changeMenuState())}>
             <Toolbar style={{width: '100%', display: 'flex', justifyContent: 'space-between'}} className='ripple'>
               <Avatar style={{marginRight: '1em'}} />
