@@ -12,7 +12,7 @@ export const Header:React.FC<IProps> = ({ match }) => {
 	return (
       <>
         <HeaderComponents id={match.params.id} />
-        <Drawer />
+        <Drawer/>
       </>
 	);
 }

@@ -10,7 +10,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeMenuState } from './../actions/changeMenuState';
 
 interface IProps{
-  id: string,
+  id: string
 }
 
 export const HeaderComponents:React.FC<IProps> = (props) => {
