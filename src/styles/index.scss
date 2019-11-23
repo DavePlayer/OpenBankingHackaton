@@ -36,12 +36,12 @@ body *
 .MuiFormControl-root{
     width: 75% !important;
 }
-.send-icon{
+.message-icon{
     margin-top: 10px;
     margin-left: 20px;
     font-size: 32px !important;
 }
-.send-icon:hover{
+.message-icon:hover{
     transform: scale(1.2) !important;
     cursor: pointer;
     color: #3f51b5;
@@ -49,4 +49,18 @@ body *
 #standard-basic{
     width: 100% !important;
     padding-top: 15px;
+}
+
+.goal {
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    gap: 1em;
+}
+#date{
+    margin-top: 9px !important;
+}
+.price{
+    margin: 0 auto !important;
+    padding-bottom: 20px !important;
 }
