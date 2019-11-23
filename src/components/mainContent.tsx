@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './Header';
 import Message from './Message';
 import Send from './Send';
+import GoalReminder from './GoalReminder';
 
 import { useSelector } from 'react-redux';
 import { RouteComponentProps } from 'react-router';
@@ -17,6 +18,7 @@ export const mainContent:React.FC<IProps> = ({ match }) => {
     return (
         <>
             <Header id={match.params.id} />
+            <GoalReminder />
              <div className="container">
                 <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
                 <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>

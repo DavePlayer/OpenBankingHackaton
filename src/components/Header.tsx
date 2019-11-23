@@ -10,7 +10,7 @@ export const Header:React.FC<IProps> = (props) => {
 	return (
       <>
         <HeaderComponents id={props.id} />
-        <Drawerr/>
+        <Drawerr />
       </>
 	);
 }
