@@ -10,10 +10,13 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import SearchIcon from '@material-ui/icons/Search';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { RouteComponentProps } from 'react-router';
 
+interface IProps extends RouteComponentProps{
 
+}
 
-export const Drawerr:React.FC = () => {
+export const Drawerr:React.FC<IProps> = ({ history }) => {
   const menuState:any = useSelector( ( reducers:any ) => reducers.menu)
   const dispatch = useDispatch();
   console.log(menuState)
@@ -23,7 +26,7 @@ export const Drawerr:React.FC = () => {
           {/* <Drawer anchor='left'> */}
             <div style={{display: 'flex'}}>
               <div style={{flexBasis: '80%', display: 'flex', justifyContent: 'flex-start'}}>
-                <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => dispatch(changeMenuState())} edge='end' color="inherit" aria-label="menu">
+                <IconButton onClick={() => } style={{width: '2em', marginRight: '0.1em'}}  onClick={() => dispatch(changeMenuState())} edge='end' color="inherit" aria-label="menu">
                     <AccountCircleIcon style={{transform: 'scale(1.5, 1.5)'}}/>
                 </IconButton >
                 <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => dispatch(changeMenuState())} edge='end' color="inherit" aria-label="menu">
