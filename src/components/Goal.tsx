@@ -6,9 +6,11 @@ import { useDispatch } from 'react-redux';
 import { addGoal } from '../actions/addGoal';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 // import { addGoal } from 'actions/addGoal';
+interface IGoalProps {
+    id: string;
+}
 
-
-const Goal:React.FC = () => {
+const Goal:React.FC<IGoalProps> = ({id}) => {
 const [name, setName] = useState('');
 const [price, setPrice] = useState('');
 const [open, setOpen] = useState(false)
@@ -21,6 +23,7 @@ const goal ={
     name: name,
     price: price,
     date: date,
+    id: id
 }
 
 const setGoal = () => {
