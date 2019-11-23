@@ -12,8 +12,9 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
     output: {
-        path: path.join(__dirname, "/dist"),
-        filename: "index_bundle.js"
+        path: path.join(__dirname, "www"),
+        filename: "index_bundle.js",
+        publicPath: '/',
     },
     module: {
         rules: [
@@ -64,7 +65,8 @@ module.exports = {
           })
     ],
     devServer: {
-        contentBase: 'app/ui/www',
+        contentBase: path.join(__dirname, "/dist"),
+        compress: true,
         port: 4000,
         historyApiFallback: true,
     },

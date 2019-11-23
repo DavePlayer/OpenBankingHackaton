@@ -1,7 +1,9 @@
 import React from 'react';
-import Header from './Header';
-import Message from './Message';
-import Send from './Send';
+// import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+//import Drawer from '@material-ui/core/Drawer';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { test } from './test';
+import { mainContent } from './mainContent'
 
 import { useSelector } from 'react-redux';
 // import { sendMessage } from '../actions/senMessage';
@@ -18,12 +20,14 @@ const Main:React.FC = () => {
   const msg = messages.messages.text;
   console.log(msg);
 	return (
-      <div className="container">
-        <Header />
-        <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
-        <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
-        { msg.map((el: any)=> el != '' && (<Message message={el}/>))}
-        <Send />
+      <div>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/' exact component={test} />
+            <Route path='/groups/:id' exact  component={mainContent} />
+            <Route path='/' render={() => <div>$404 Nie dziala</div>} />
+          </Switch>
+        </BrowserRouter> 
       </div>
 	);
 }
