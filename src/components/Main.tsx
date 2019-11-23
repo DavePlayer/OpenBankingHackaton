@@ -1,26 +1,29 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Avatar from '@material-ui/core/Avatar';
+import Header from './Header';
+import Message from './Message';
+import Send from './Send';
 
+import { useSelector } from 'react-redux';
+// import { sendMessage } from '../actions/senMessage';
+// import { useEffect } from 'react';
 
 const Main:React.FC = () => {
+
+  //const dispatch = useDispatch();
+  const messages: any = useSelector((msg: any) => msg);
+
+  // useEffect(()=>{
+  //   dispatch(sendMessage());
+  // }, [])
+  const msg = messages.messages.text;
+  console.log(msg);
 	return (
-        <div>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Avatar alt="Remy Sharp"/>
-            <Typography variant="h6">
-              New Group
-            </Typography>
-          </Toolbar>
-        </AppBar>
+      <div className="container">
+        <Header />
+        <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
+        <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
+        { msg.map((el: any)=> el != '' && (<Message message={el}/>))}
+        <Send />
       </div>
 	);
 }

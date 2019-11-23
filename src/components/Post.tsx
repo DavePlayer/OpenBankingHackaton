@@ -8,7 +8,7 @@ const Post:React.FC = () => {
 const dispatch = useDispatch();
 
 const posts: any = useSelector((post: any) => post);
-console.log(posts.posts.items);
+//console.log(posts.posts.items);
     useEffect(()=>{
         dispatch(fetchPosts());
     }, [])

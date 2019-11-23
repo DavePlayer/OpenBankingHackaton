@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import postReducer from './postReducer';
+import sendMessage from './sendMessage';
 
 export default combineReducers({
-    posts: postReducer
+    messages: sendMessage
 })
