@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 
+
 const Message:React.FC = () => {
 	return (
         <Grid container spacing={0} className="message">
