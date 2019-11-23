@@ -52,7 +52,7 @@ const GoalReminder:React.FC<IGoalReminderProps> = ({id}) => {
                     <div className="err">{err}</div>
                     <h2>Payment</h2>
                     <TextField id="standard-basic" label="Payment" onChange={(e) => setPayment(e.target.value)}/>
-                    <Button variant="contained" color="primary" className="pay-button" onClick={() => pay()}>
+                    <Button variant="contained" color="primary" className="pay-button2" onClick={() => pay()}>
                             Pay
                     </Button>
                 </div>
