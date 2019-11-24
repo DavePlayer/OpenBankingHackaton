@@ -41,7 +41,7 @@ const FriendsList:React.FC<IAddGroupProps> = ({friends}) => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>Invite frineds</Typography>
+              <Typography>Invite friends</Typography>
             </ExpansionPanelSummary>
             <List>
             {friends.map((el: any) => (

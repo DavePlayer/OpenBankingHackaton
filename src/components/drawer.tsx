@@ -24,7 +24,7 @@ export const Drawerr = withRouter(({ history, match }) => {
           {/* <Drawer anchor='left'> */}
             <div style={{display: 'flex'}}>
               <div style={{flexBasis: '80%', display: 'flex', justifyContent: 'flex-start'}}>
-                <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => {history.push(`/users/${match.params.user}`)}} edge='end' color="inherit" aria-label="menu">
+                <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => {dispatch(changeMenuState());history.push(`/users/${match.params.user}`)}} edge='end' color="inherit" aria-label="menu">
                     <AccountCircleIcon style={{transform: 'scale(1.5, 1.5)'}}/>
                 </IconButton >
                   <AddGroup />

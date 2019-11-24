@@ -31,11 +31,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif)$/i,
                 use: [
-                    'url-loader?limit=10000',
-                    'img-loader'
-                ]
+                  {
+                    loader: 'file-loader',
+                  },
+                ],
             }
 
         ]
@@ -52,7 +53,7 @@ module.exports = {
             crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
             icons: [
               {
-                src: path.resolve('icon-192x192.png'),
+                src: path.resolve('./src/assets/img/logo.png'),
                 size: '192x192'
               }
             ]

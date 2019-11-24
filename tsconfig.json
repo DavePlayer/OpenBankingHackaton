@@ -38,6 +38,7 @@
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
 		"forceConsistentCasingInFileNames": true,
-		"importHelpers": true
+		"importHelpers": true,
+		"include": ["index.d.ts"]
 	},
 }

@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import { useSelector } from 'react-redux';
 import { IUser } from './../reduceres/user';
+import * as img from '../assets/img/user.png';
 
 interface IMessageProps {
     message: string;
@@ -15,7 +16,7 @@ const Message:React.FC<IMessageProps> = ({message}) => {
 	return (
         <Grid container spacing={0} className="message">
             <Grid item xs={2}>
-                <Avatar alt="user" className="message-avatar"/>
+                <Avatar alt="user" className="message-avatar" src={img}/>
             </Grid>
             <Grid item xs={10}>
                 <Paper className="message-content">

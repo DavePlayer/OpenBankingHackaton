@@ -1,5 +1,5 @@
 export interface IUserhistory{
-    data: Date,
+    date: Date,
     group: {id: number, name:string},
     moneyAmmount: number,
     goal: string
@@ -10,13 +10,14 @@ export interface IUser {
     name:string,
     lastName:string,
     mail: string,
+    newPassword?: string
     friends: Array<number>,
     groups: Array<number>,
     transactionHistory: Array<IUserhistory>,
 }
 
 const johnHistory:IUserhistory = {
-    data: new Date('2019-03-25'),
+    date: new Date('2019-03-25'),
     group: {id:3, name: "MyTeam"},
     moneyAmmount: 135,
     goal: 'pizza'
@@ -35,6 +36,8 @@ const olek:IUser = {
 
 export const user = (state:IUser = olek, action:{type:string, data:IUser}) => {
     switch(action.type){
+        case "UPDATE_USER":
+            return action.data
         default:
             return state
     }
