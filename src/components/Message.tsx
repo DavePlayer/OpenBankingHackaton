@@ -19,7 +19,7 @@ const Message:React.FC<IMessageProps> = ({message}) => {
             </Grid>
             <Grid item xs={10}>
                 <Paper className="message-content">
-                    <h3>{user}</h3>
+                    <h3>{user.name}</h3>
                     <p>{message}</p>
                 </Paper>
             </Grid>
