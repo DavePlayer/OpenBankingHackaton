@@ -12,7 +12,7 @@ const [group_name, setGroup_name] = useState('');
 //const [users] = useState([]);
 const dispatch = useDispatch();
 
-const friends = ["Szymon", "Dawid", "Kamila"];
+const friends = ["John", "George", "Emilly"];
 
 const group = {
     g_name: group_name,

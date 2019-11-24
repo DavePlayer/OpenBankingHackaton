@@ -14,6 +14,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import IconButton from '@material-ui/core/IconButton';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
+import * as img from '../assets/img/user.png';
 
 export const Profile = () => {
     const user:IUser = useSelector( ( reducers:any ) => reducers.user );
@@ -22,7 +23,7 @@ export const Profile = () => {
         <>
         <EditProfile />
         <Paper style={{display: 'flex', backgroundColor: '#1D5DFF', color: 'white', marginBottom: '1em' , border:'1px solid #eee', flexDirection: 'column', alignItems: 'center', marginTop: '3em', }}>
-            <Avatar style={{transform: 'scale(2, 2)', marginBottom: '1em', position: 'relative', top: '-1em'}} />
+            <Avatar style={{transform: 'scale(2, 2)', marginBottom: '1em', position: 'relative', top: '-1em', backgroundColor: 'white'}} src={img} />
             <Typography variant='h4'>{`${user.name} ${user.lastName}`}</Typography>
             <div style={{padding: '0.5em', marginBottom: '0.5em' ,alignItems: 'center', justifyContent: 'space-between', display: 'flex', borderBottom: '1px solid #ccc', width: '85%'}}>
             <div>

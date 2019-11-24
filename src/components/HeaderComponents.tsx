@@ -8,6 +8,7 @@ import Avatar from '@material-ui/core/Avatar';
 //import Drawer from '@material-ui/core/Drawer';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeMenuState } from './../actions/changeMenuState';
+import * as img from '../assets/img/group.png';
 
 interface IProps{
   id: string
@@ -25,7 +26,7 @@ export const HeaderComponents:React.FC<IProps> = (props) => {
               <MenuIcon />
             </IconButton>
             <div style={{flexBasis: '98%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Avatar alt="Remy Sharp" style={{marginRight: '1em'}}/>
+                <Avatar alt="Remy Sharp" style={{marginRight: '0.5em'}} src={img}/>
                 <Typography variant="h6">
                   {props.id}
                 </Typography>
