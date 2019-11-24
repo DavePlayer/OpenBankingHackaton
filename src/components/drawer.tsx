@@ -7,15 +7,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { changeMenuState } from './../actions/changeMenuState';
 import { Tolbar } from './toolbar';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import GroupAddIcon from '@material-ui/icons/GroupAdd';
+
 import SearchIcon from '@material-ui/icons/Search';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { withRouter } from 'react-router-dom';
+import AddGroup from './AddGroup';
 
 export const Drawerr = withRouter(({ history, match }) => {
   const menuState:any = useSelector( ( reducers:any ) => reducers.menu)
   const dispatch = useDispatch();
-  console.log(history, match)
+  const group: any = useSelector((el: any) => el);
+  console.log(group.groups.groups);
 	return (
         <>
         <Drawer open={menuState} >
@@ -25,9 +27,7 @@ export const Drawerr = withRouter(({ history, match }) => {
                 <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => {dispatch(changeMenuState());history.push(`/users/${match.params.user}`)}} edge='end' color="inherit" aria-label="menu">
                     <AccountCircleIcon style={{transform: 'scale(1.5, 1.5)'}}/>
                 </IconButton >
-                <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => dispatch(changeMenuState())} edge='end' color="inherit" aria-label="menu">
-                    <GroupAddIcon style={{transform: 'scale(1.5, 1.5)'}} />
-                </IconButton>
+                  <AddGroup />
                 <IconButton style={{width: '2em', marginRight: '0.1em'}}  onClick={() => dispatch(changeMenuState())} edge='end' color="inherit" aria-label="menu">
                     <SearchIcon style={{transform: 'scale(1.5, 1.5)'}} />
                 </IconButton>
@@ -39,9 +39,11 @@ export const Drawerr = withRouter(({ history, match }) => {
               </div>
             </div>
             <br/>
-            <Tolbar groupName='Body pillow and anime' />
-            <Tolbar groupName='xdddd' />
-            <Tolbar groupName='TNT' />
+            <Tolbar groupName='Pizza' />
+            <Tolbar groupName='MyTeam' />
+            {group.groups.groups.map((el: any)=> (
+                <Tolbar groupName={el.g_name} />
+            ))}
           </Drawer>
         {/* </Drawer> */}
       </>

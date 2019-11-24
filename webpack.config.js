@@ -46,9 +46,8 @@ module.exports = {
         }),
         new WebpackPwaManifest({
             filename: "manifest.json",
-            name: 'My Progressive Web App',
-            short_name: 'MyPWA',
-            description: 'My awesome Progressive Web App!',
+            name: 'PeerPay',
+            short_name: 'PeerPay',
             background_color: '#ffffff',
             crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
             icons: [

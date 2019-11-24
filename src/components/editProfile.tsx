@@ -8,7 +8,7 @@ export const EditProfile = () => {
     const menuState:any = useSelector( ( reducers:any ) => reducers.menu);
     const user:any = useSelector( (reducers:any) => reducers.user )
     const dispatch = useDispatch()
-    const [state, setState] = useState(user);
+    const [state] = useState(user);
     console.log('DASDA: ', menuState);
     return (
        <Drawer open={menuState} anchor='top'>

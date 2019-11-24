@@ -2,16 +2,11 @@ import React from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Login } from './login';
 import { mainContent } from './mainContent'
-import { useSelector } from 'react-redux';
 import { Register } from './Register';
 import { Profile } from './Profile'
 
 const Main:React.FC = () => {
 
-  const messages: any = useSelector((msg: any) => msg);
-
-  const msg = messages.messages.text;
-  console.log(msg);
 	return (
       <div>
         <BrowserRouter>

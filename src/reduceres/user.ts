@@ -30,7 +30,7 @@ const olek:IUser = {
     mail:'olek@zsti.gliwice', 
     friends:[2,3,4], 
     groups:[1,2,3],
-    newPassword: ''
+    newPassword: '',
     transactionHistory: [olekHistory, olekHistory],
 }
 
