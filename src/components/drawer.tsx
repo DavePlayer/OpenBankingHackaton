@@ -39,9 +39,8 @@ export const Drawerr = withRouter(({ history, match }) => {
               </div>
             </div>
             <br/>
-            <Tolbar groupName='Body pillow and anime' />
-            <Tolbar groupName='xdddd' />
-            <Tolbar groupName='TNT' />
+            <Tolbar groupName='Pizza' />
+            <Tolbar groupName='MyTeam' />
             {group.groups.groups.map((el: any)=> (
                 <Tolbar groupName={el.g_name} />
             ))}

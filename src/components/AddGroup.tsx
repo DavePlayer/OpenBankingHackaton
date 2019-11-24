@@ -25,16 +25,18 @@ const group = {
             }} edge='end' color="inherit" aria-label="menu">
             <GroupAddIcon style={{transform: 'scale(1.5, 1.5)'}} />
         </IconButton>
-        <Dialog className="add_group" open={open} onClose={() => dispatch(changeMenuState())}>
-            <h2>Add Group</h2>
-            <TextField id="standard-basic" label="Group name" onChange={(e) => setGroup_name(e.target.value)}/>
-            <FriendsList friends={friends}/>
-            <Button variant="contained" color="primary" onClick={() => {
-                setOpen(false);
-                dispatch(addGroup(group)
-                )}}>
-                 Add Group
-            </Button>
+        <Dialog open={open} onClose={() => dispatch(changeMenuState())}>
+            <div className="add_group">
+                <h2>Add Group</h2>
+                <TextField id="standard-basic" label="Group name" onChange={(e) => setGroup_name(e.target.value)}/>
+                <FriendsList friends={friends}/>
+                <Button variant="contained" color="primary" onClick={() => {
+                    setOpen(false);
+                    dispatch(addGroup(group)
+                    )}}>
+                    Add Group
+                </Button>
+            </div>
         </Dialog>
         </>
 	);

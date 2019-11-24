@@ -33,7 +33,7 @@ export const Login:React.FC<IProps> = ({history}) => {
                     </Grid>
                     </Grid>
                 </div>
-                <Button onClick={() => history.push('/users/olek/groups/TNT')} style={{flexBasis: '100%'}} variant="contained" color="primary">Login</Button>
+                <Button onClick={() => history.push('/users/olek/groups/MyTeam')} style={{flexBasis: '100%'}} variant="contained" color="primary">Login</Button>
                 <Typography variant="h5">OR</Typography>
                 <Button onClick={() => history.push('/register')} style={{flexBasis: '100%'}} variant="contained" color="primary">Register</Button>
             </Paper>

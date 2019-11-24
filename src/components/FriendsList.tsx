@@ -5,7 +5,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
-import { List } from '@material-ui/core';
+import { List, ExpansionPanel, Typography, ExpansionPanelSummary } from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 interface IAddGroupProps {
     friends: Array<string>;
@@ -33,7 +34,16 @@ const FriendsList:React.FC<IAddGroupProps> = ({friends}) => {
 
 	return (
         <>
-        <List>
+        <div className="friends">
+         <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Invite frineds</Typography>
+            </ExpansionPanelSummary>
+            <List>
             {friends.map((el: any) => (
                 <ListItem>
                 <ListItemAvatar>
@@ -51,6 +61,8 @@ const FriendsList:React.FC<IAddGroupProps> = ({friends}) => {
                 </ListItem>
             ))}
             </List>
+          </ExpansionPanel>
+          </div>
         </>
 	);
 }
