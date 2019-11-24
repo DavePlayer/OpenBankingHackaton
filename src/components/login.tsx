@@ -23,7 +23,7 @@ export const Login:React.FC<IProps> = ({history}) => {
                     </Grid>
                     </Grid>
                 </div>
-                <div style={{textAlign: 'center'}}>   
+                <div style={{textAlign: 'center', marginBottom: '1em'}}>   
                     <Grid container spacing={0} alignItems="flex-end">
                     <Grid item>
                         <LockIcon />

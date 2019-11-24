@@ -30,12 +30,15 @@ const olek:IUser = {
     mail:'olek@zsti.gliwice', 
     friends:[2,3,4], 
     groups:[1,2,3],
+    newPassword: ''
     transactionHistory: [olekHistory, olekHistory],
 }
 
 
 export const user = (state:IUser = olek, action:{type:string, data:IUser}) => {
     switch(action.type){
+        case "UPDATE_USER":
+            return action.data
         default:
             return state
     }
