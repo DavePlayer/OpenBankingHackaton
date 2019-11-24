@@ -15,21 +15,21 @@ export interface IUser {
     transactionHistory: Array<IUserhistory>,
 }
 
-const olekHistory:IUserhistory = {
+const johnHistory:IUserhistory = {
     data: new Date('2019-03-25'),
-    group: {id:3, name: "TNTs"},
+    group: {id:3, name: "MyTeam"},
     moneyAmmount: 135,
-    goal: 'Zarcie'
+    goal: 'pizza'
 }
 
 const olek:IUser = {
     id:1, 
-    name: 'olek', 
-    lastName: 'na jego czesc', 
-    mail:'olek@zsti.gliwice', 
+    name: 'John', 
+    lastName: 'Smith', 
+    mail:'john@smith.gliwice', 
     friends:[2,3,4], 
     groups:[1,2,3],
-    transactionHistory: [olekHistory],
+    transactionHistory: [johnHistory],
 }
 
 

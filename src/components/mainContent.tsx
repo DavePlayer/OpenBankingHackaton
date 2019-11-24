@@ -20,8 +20,7 @@ export const mainContent:React.FC<IProps> = ({ match }) => {
             <Header id={match.params.id} />
             <GoalReminder id={match.params.id}/>
              <div className="container">
-                <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
-                <Message message={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, quis?"}/>
+                <Message message={"Hey what's up? How about pizza tommorow?"}/>
                 { msg.map((el: any)=> (el.message != '' && el.id == match.params.id) && (<Message message={el.message}/>))}
                 <Send id={match.params.id}/>
             </div>
