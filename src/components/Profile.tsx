@@ -27,7 +27,7 @@ export const Profile = () => {
             <div style={{padding: '0.5em', marginBottom: '0.5em' ,alignItems: 'center', justifyContent: 'space-between', display: 'flex', borderBottom: '1px solid #ccc', width: '85%'}}>
             <div>
             <AlternateEmailIcon />
-            {' '+user.mail}
+            {' '+user.email}
             </div>
             <IconButton onClick={() => dispatch(changeMenuState())} edge="start" color="inherit" aria-label="menu"><BorderColorIcon /></IconButton>
             </div>
