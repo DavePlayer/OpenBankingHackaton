@@ -2,17 +2,19 @@ export interface IUserhistory{
     date: Date,
     group: {id: number, name:string},
     moneyAmmount: number,
-    goal: string
+    goal: string,
 }
 
 export interface IUser {
     id: number,
     name:string,
     lastName:string,
-    mail: string,
-    newPassword?: string
-    friends: Array<number>,
+    email: string,
+    newPassword?: string,
+    token?: string,
+    // friends: Array<number>,
     groups: Array<number>,
+    toke?: string,
     transactionHistory: Array<IUserhistory>,
 }
 
@@ -27,16 +29,17 @@ const olek:IUser = {
     id:1, 
     name: 'John', 
     lastName: 'Smith', 
-    mail:'john@smith.gliwice', 
-    friends:[2,3,4], 
+    email:'john@smith.gliwice', 
     groups:[1,2,3],
     transactionHistory: [johnHistory],
 }
 
 
-export const user = (state:IUser = olek, action:{type:string, data:IUser}) => {
+export const user = (state:any = olek, action:{type:string, data:any}) => {
     switch(action.type){
         case "UPDATE_USER":
+            return action.data
+        case "FETCH_USER":
             return action.data
         default:
             return state
